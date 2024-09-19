@@ -6,9 +6,7 @@ function Header() {
     <>
       <nav id="navbar-example2" className="navbar navbar-expand-lg bg-body-tertiary px-3 mb-3">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#scrollspyHeading1">
-            KINEL
-          </a>
+          <a className="navbar-brand" href="#scrollspyHeading1">KINEL</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,14 +21,7 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#Inicio">
-                  Inicio
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#Profesionales">
-                  Profesionales
-                </a>
+                <a className="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -43,33 +34,19 @@ function Header() {
                   Áreas
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#Kinesiologia">
-                      Kinesiología
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#Nutricion">
-                      Nutrición
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#Psicopedagogia">
-                      Psicopedagogía
-                    </a>
-                  </li>
+                  <li><a className="dropdown-item" href="#Kinesiologia">Kinesiología</a></li>
+                  <li><a className="dropdown-item" href="#Nutricion">Nutrición</a></li>
+                  <li><a className="dropdown-item" href="#Psicopedagogia">Psicopedagogía</a></li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#Tratamientos">
-                  Tratamientos
-                </a>
+                <a className="nav-link" href="#Profesionales">Profesionales</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#Tratamientos">Tratamientos</a>
               </li>
             </ul>
-
-            <button className="btn btn-sign-in" type="button">
-              Ingresar
-            </button>
+            <button type="button" className="btn btn-success">Ingresar</button>
           </div>
         </div>
       </nav>

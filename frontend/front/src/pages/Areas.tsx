@@ -4,7 +4,7 @@ function Areas() {
   return (
     <div>
       <h1>Áreas</h1>
-      <p>Estas son las áreas disponibles: Kinesioaaaalogía, Nutrición, Psicopedagogía.</p>
+      <p>Estas son las áreas: Kinesiología, Nutrición, Psicopedagogía.</p>
     
     <h4 id="Kinesiologia">Kinesiología</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae eros convallis, semper magna ut, finibus orci. Aliquam eu tortor lectus. Nunc non maximus leo. Proin placerat, odio in rhoncus lacinia, ante enim interdum elit, vitae varius est mauris in nulla. Cras quis elementum ipsum, et tempus erat. Phasellus consectetur vitae ligula ut consequat. In hac habitasse platea dictumst.
