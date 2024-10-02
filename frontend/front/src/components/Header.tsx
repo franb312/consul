@@ -6,14 +6,14 @@ function Header() {
   const navigate = useNavigate();
 
   const handleNavigation = (sectionId: string) => {
-    // Navega a la página de inicio y luego realiza el scroll al ancla
+    // Navega a la página de inicio y luego realiza el scroll 
     navigate('/');
     setTimeout(() => {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100); // Timeout para permitir que la página se cargue antes del scroll
+    }, 100); // Timeout para permitir que la página se cargue 
   };
 
   return (
