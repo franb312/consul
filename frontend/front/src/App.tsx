@@ -5,6 +5,7 @@ import Profesionales from './pages/Profesionales.tsx';
 import Tratamientos from './pages/Tratamientos.tsx';
 import Ingresar from './pages/Ingresar.tsx';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Dashboard from './pages/Dashboard.tsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* Rutas para páginas específicas */}
       <Routes>
         <Route path="/ingresar" element={<Ingresar />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         {/* Ruta para la endless page (inicio, áreas, etc.) */}
         <Route path="/" element={
           <>
