@@ -34,6 +34,8 @@ function Ingresar() {
       const data = await response.json();
       console.log('Login exitoso:', data);
 
+      localStorage.setItem('authToken', data.token);
+      
       navigate('/dashboard');
 
     } catch (error) {

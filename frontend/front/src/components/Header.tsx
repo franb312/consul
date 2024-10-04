@@ -1,19 +1,34 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react'; 
 
 function Header() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+
+  useEffect(() => {
+    // Verificar si hay token
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      setIsLoggedIn(true);  // Si hay token=autenticado
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken'); // Eliminamos el token al hacer logout
+    setIsLoggedIn(false); // Actualizamos el estado
+    navigate('/'); // Redirigimos al inicio
+  };
 
   const handleNavigation = (sectionId: string) => {
-    // Navega a la página de inicio y luego realiza el scroll 
     navigate('/');
     setTimeout(() => {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100); // Timeout para permitir que la página se cargue 
+    }, 100);
   };
 
   return (
@@ -60,8 +75,17 @@ function Header() {
                 <a className="nav-link" onClick={() => handleNavigation('Tratamientos')}>Tratamientos</a>
               </li>
             </ul>
-            
-            <button className="btn btn-success" onClick={() => navigate('/ingresar')}>Ingresar</button>
+
+            {/* cambia el botón según si está autenticado o no */}
+            {isLoggedIn ? (
+            <div className="d-flex align-items-center">
+             <button className="btn btn-primary me-2" onClick={() => navigate('/reserva-turno')}>Reservar Turno</button>
+             <button className="btn btn-outline-primary me-2" onClick={() => navigate('/perfil')}>Perfil</button>
+             <button className="btn btn-danger" onClick={handleLogout}>Cerrar sesión</button> {/* handleLogout */}
+             </div>
+              ) : (
+              <button className="btn btn-success" onClick={() => navigate('/ingresar')}>Ingresar</button>
+              )}
           </div>
         </div>
       </nav>
